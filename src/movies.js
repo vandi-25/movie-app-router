@@ -1,0 +1,39 @@
+const movies = [
+  {
+    id: 1,
+    title: 'Inception',
+    description: 'A thief who steals secrets from people\'s dreams is given the task of planting an idea instead.',
+    posterURL: '/posters/inception.svg',
+    rating: 5,
+  },
+  {
+    id: 2,
+    title: 'The Dark Knight',
+    description: 'Batman faces the Joker, a criminal who wants to plunge Gotham City into chaos.',
+    posterURL: '/posters/dark-knight.svg',
+    rating: 5,
+  },
+  {
+    id: 3,
+    title: 'Interstellar',
+    description: 'A team of explorers travels through a wormhole in space to find a new home for humanity.',
+    posterURL: '/posters/interstellar.svg',
+    rating: 4,
+  },
+  {
+    id: 4,
+    title: 'Breaking Bad',
+    description: 'A high school chemistry teacher turns to making drugs to secure his family\'s future.',
+    posterURL: '/posters/breaking-bad.svg',
+    rating: 5,
+  },
+  {
+    id: 5,
+    title: 'Spider-Man: Into the Spider-Verse',
+    description: 'Teenager Miles Morales becomes Spider-Man and meets Spider-People from other dimensions.',
+    posterURL: '/posters/spider-verse.svg',
+    rating: 3,
+  },
+];
+
+export default movies;
