@@ -42,9 +42,17 @@ button {
 }
 
 .movie-card {
+  display: block;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.movie-card:hover {
+  border-color: #1f3b57;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .movie-card img {
@@ -53,5 +61,17 @@ button {
 }
 
 .rating {
+  font-weight: bold;
+}
+
+.movie-details iframe {
+  max-width: 100%;
+  border: none;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #1f3b57;
   font-weight: bold;
 }

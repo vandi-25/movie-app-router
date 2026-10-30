@@ -5,6 +5,7 @@ function AddMovie({ onAdd }) {
   const [description, setDescription] = useState('');
   const [posterURL, setPosterURL] = useState('');
   const [rating, setRating] = useState(1);
+  const [trailer, setTrailer] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,6 +19,7 @@ function AddMovie({ onAdd }) {
       description: description,
       posterURL: posterURL || '/posters/default.svg',
       rating: rating,
+      trailer: trailer,
     });
 
     // Clear the form
@@ -25,6 +27,7 @@ function AddMovie({ onAdd }) {
     setDescription('');
     setPosterURL('');
     setRating(1);
+    setTrailer('');
   };
 
   return (
@@ -47,6 +50,12 @@ function AddMovie({ onAdd }) {
         placeholder="Poster URL (optional)"
         value={posterURL}
         onChange={(e) => setPosterURL(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Trailer embed link (optional)"
+        value={trailer}
+        onChange={(e) => setTrailer(e.target.value)}
       />
       <select value={rating} onChange={(e) => setRating(Number(e.target.value))}>
         <option value={1}>1 star</option>

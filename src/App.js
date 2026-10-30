@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import moviesData from './movies';
 import MovieList from './components/MovieList';
 import Filter from './components/Filter';
 import AddMovie from './components/AddMovie';
+import MovieDetails from './components/MovieDetails';
 import './App.css';
 
 function App() {
@@ -22,15 +24,25 @@ function App() {
 
   return (
     <div className="App">
-      <h1>My Favorite Movies</h1>
-      <Filter
-        title={titleFilter}
-        rate={rateFilter}
-        onTitleChange={setTitleFilter}
-        onRateChange={setRateFilter}
-      />
-      <MovieList movies={filteredMovies} />
-      <AddMovie onAdd={addMovie} />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <h1>My Favorite Movies</h1>
+              <Filter
+                title={titleFilter}
+                rate={rateFilter}
+                onTitleChange={setTitleFilter}
+                onRateChange={setRateFilter}
+              />
+              <MovieList movies={filteredMovies} />
+              <AddMovie onAdd={addMovie} />
+            </>
+          }
+        />
+        <Route path="/movie/:id" element={<MovieDetails movies={movies} />} />
+      </Routes>
     </div>
   );
 }
